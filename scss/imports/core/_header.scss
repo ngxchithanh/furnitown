@@ -1,0 +1,242 @@
+// css header
+header{
+    height: 100px;
+    max-width: $container-max-width;
+    width: 100%;
+    position: absolute;
+    z-index: 20;
+    .container-fluid{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .menu{
+            display: flex;
+            height: 100%;
+            li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                a{
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    text-decoration: none;
+                    font-size: 11px;
+                    color: #0f0f0f;
+                    font-family: 'AH';
+                    text-transform: uppercase;
+                    padding: 0 15px;
+                }
+                i{
+                    cursor: pointer;
+                    img{
+                        width: 15px;
+                    }
+                }
+            }
+        }
+        .menuheader__right{
+            display: flex;
+            height: 100%;
+            li{
+                display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a{
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+
+                        text-decoration: none;
+                        font-size: 11px;
+                        color: $black-cl;
+                        font-family: 'AH';
+                        text-transform: uppercase;
+                        padding: 0 15px;
+                    }
+                img{
+                    height: 10px;
+                    width: 25px;
+                    @include transform(rotate(-180deg));
+                }
+            }
+        }
+        
+    }
+    .btnmenu{
+        height: 180px;
+        width: 180px;
+        position: relative;
+        top: 25vh;
+        z-index: 20;
+        background-color: $blue-cl;
+        @include transition($t);
+        .btnmenu-wrap{
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -50%);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            .hamburger{
+                margin-top: 10px;
+                .line{
+                    height: 1px;
+                    width: 40px;
+                    background-color: #fff;
+                    margin: 10px 0;
+                }
+            }
+            .menu-hover{
+                // display: flex;
+                align-items: flex-end;
+                justify-content: center;
+                display: none;
+                p{
+                    font-size: 12px;
+                    font-family: 'AH';
+                    color: $black-cl;
+                    line-height: 3px;
+                    text-transform: uppercase;
+                    margin-right: 20px;
+                }
+                .logoleft{
+                    &::after{
+                        content: '';
+                        height: 1px;
+                        width: 100%;
+                        background-color: $black-cl;
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+        &:hover{
+            background-color: $white-cl;
+            width: 210px;
+            @include transition($t);
+            .logo{
+                display: none;
+            }
+            .hamburger{
+                display: none;
+            }
+            .menu-hover{
+                display: flex;
+            }
+        }
+    }
+    .headermb{
+        display: none;
+        pointer-events: none;
+    }
+}
+.menutop{
+    height: 70px;
+    width: 100%;
+    background-color: $blue-cl;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: fixed;
+    display: none;
+    z-index: 800;
+
+    &.active{
+        display: block;
+    }
+    ul{
+        display: flex;
+        height: 70px;
+        justify-content: center;
+        align-items: center;
+        li{
+            text-align: center;
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                font-size: 11px;
+                font-family: 'Arial';
+                font-weight: bold;
+                color: #fff;
+                text-transform: uppercase;
+                padding: 0 30px;
+                @include transition($t);
+                &:hover, &.active{
+                    opacity: 1;
+                    color: #b8d2ef;
+                    @include transition($t)
+                }
+                img{
+                    height: 42px;
+                    width: 55px;
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 991px) {
+    header{
+        .btnmenu{
+            height: 150px;
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    header{
+        position: relative;
+        width: 100vw;
+        .container-fluid{
+            position: absolute;
+            pointer-events: none;
+            display: none;
+        }
+        .btnmenu{
+            display: none;
+        }
+        .headermb{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding-right: 40px;
+            padding-left: 40px;
+            margin-right: auto;
+            margin-left: auto;
+            height: 100%;
+            background-color: $blue-cl;
+            .menumb{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .hamburger{
+                    margin-right: 10px;
+                    .line{
+                        height: 4px;
+                        width: 40px;
+                        background-color: $white-cl;
+                        margin: 10px 0;
+                    }
+                }
+                .mn{
+                    color: $white-cl;
+                    font-size: 18px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

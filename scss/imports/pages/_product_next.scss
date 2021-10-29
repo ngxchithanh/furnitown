@@ -1,0 +1,24 @@
+.product{
+    .products_next{
+        .container{
+            .cate__item{
+                border: none;
+            }
+            .xemthem{
+                a{
+                    text-decoration: none;
+                    color: #909090;
+                    font-size: 11px;
+                    font-family: Arial;
+                    text-transform: uppercase;
+                    line-height: 20px;
+                }
+                img{
+                    height: unset;
+                    width: unset;
+                }
+            }
+        }
+    }
+    
+}

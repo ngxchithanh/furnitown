@@ -1,0 +1,25 @@
+// css button, title, icon, elements...
+img {
+    max-width: 100%;
+}
+.btn{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    img{
+        height: 10px;
+        width: 25px;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+    }
+        p{
+            color: $black-cl;
+            font-size: 12px;
+            font-family: 'Arial';
+            font-weight: bold;
+            line-height: 40px;
+            text-transform: uppercase;
+        }
+}

@@ -1,0 +1,81 @@
+// css components
+.list{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 30px;
+    .product-item{
+        display: flex;
+        flex-direction: column;
+        .pros{
+            font-family: Arial;
+            line-height: 40px;
+            color: $black-cl;
+            .namepros{
+                font-size: 18px;
+            }
+            .price{
+                font-size: 12px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+        .btnvid{
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+        }
+    }
+    .btn-video{
+        height: 80px;
+        width: 80px;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+    }   
+}
+.contact{
+    text-align: center;
+    padding: 70px;
+    .contact_text{
+        text-align: center;
+        margin: 0;
+        .title{
+            color: $black-cl;
+            font-size: 18px;
+            font-family: 'EB';
+            line-height: 40px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .contact_info{
+            width: 570px;
+            margin: auto;
+            p{
+                color: $black-cl;
+                font-size: 12px;
+                font-family: 'Arial';
+                line-height: 20px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+    .contact_btn{
+        padding: 60px;
+        a{
+            padding: 10px 40px;
+            border: 1px solid #ddd;
+            color: $black-cl;
+            font-size: 11px;
+            font-family: 'Arial';
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: $white-cl;
+            @include transition($t);
+            &:hover{
+                background-color: $black-cl;
+                color: $white-cl;
+                @include transition($t);
+            }
+        }
+    }
+}

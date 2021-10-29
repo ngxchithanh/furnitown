@@ -1,0 +1,207 @@
+.header-aboutus{
+    background-color: $white-cl;
+    position:absolute;
+}
+.aboutus{
+    --heightHeader: 100px;
+    padding-top: var(--heightHeader);
+    .container{
+        .aboutus__st{
+            .aboutus__st-text{
+                text-align: center;
+                margin-bottom: 36px;
+                .title{
+                    font-size: 44px;
+                    font-family: 'EB';
+                    color: $title-cl;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    line-height: 50px;
+                    margin-bottom: 20px;
+                }
+                .des{
+                    font-size: 14px;
+                    font-family: Arial;
+                    text-transform: uppercase;
+                    color: $black-cl;
+                    line-height: 20px;
+                    letter-spacing: 1px;
+                }
+            }
+            .des{
+                text-align: center;
+                width: 830px;
+                margin: auto;
+                margin-top: 50px;
+                h5{
+                    font-size: 14px;
+                    font-family: Arial;
+                    color: $black-cl;
+                    line-height: 50px;
+                    letter-spacing: 1px;
+                }
+            }
+            .line-arrow{
+                content: '';
+                height: 1px;
+                width: 200px;
+                background-color: $black-cl;
+                transform: rotate(90deg);
+                margin: auto;
+                margin-bottom: 200px;
+                margin-top: 140px;
+            }
+        }
+        .aboutus__nd{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            height: 600px;
+            padding-left: 30px;
+            padding-right: 30px;
+            .aboutus__nd-text{
+                margin-top: -100px;
+                padding-right: 30px;
+                .des{
+                    font-size: 14px;
+                    font-family: Arial;
+                    color: $black-cl;
+                    line-height: 46px;
+                    letter-spacing: 1px;
+                }
+            }
+            .aboutus__nd-img{
+                img{
+                    min-height: 518px;
+                    object-fit: cover;
+                }
+            }
+        }
+        .aboutus__rd{
+            padding-top: 70px;
+            text-align: center;
+            .aboutus__rd-text{
+                p{
+                    width: 700px;
+                    margin: auto;
+                    font-size: 13px;
+                    font-family: Arial;
+                    color: $black-cl;
+                    line-height: 26px;
+                    letter-spacing: 1px;
+                }
+                .nameau{
+                    padding: 20px 0;padding-top: 30px;
+                    padding-bottom: 40px;
+                    p{
+                        &:first-child{
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            .aboutus__rd-img{
+                .row{
+                    .col-sm{
+                        padding: 0;
+                        img{
+                            min-width: 560px;
+                            min-height: 260px;
+                            object-fit: cover;
+                        }
+                        p{
+                            font-size: 31px;
+                            font-family: 'HN';
+                            line-height: 73px;
+                            color: $sign-cl;
+
+                            position: absolute;
+                            right: 0;
+                            margin-top: -35px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px){
+    .aboutus{
+        .container{
+            .aboutus__st{
+                .des{
+                    width: 700px;
+                }
+            }
+            .aboutus__nd{
+                height: 460px;
+                .aboutus__nd-img{
+                    img{
+                        min-height: 450px;
+                    }
+                }
+            }
+            .aboutus__rd{
+                padding-top: 100px;
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .header-aboutus{
+        background-color: unset;
+    }
+    .aboutus{
+        padding-top: 50px;
+        .container{
+            .aboutus__st{
+                .aboutus__st-text{
+                    .des{
+                        width: 550px;
+                    }
+                }
+                .des{
+                    width: 550px;
+                    h5{
+                        width: 550px;
+                        line-height: 40px;
+                    }
+                }
+                .line-arrow{
+                    width: 140px;
+                    margin-bottom: 170px;
+                    margin-top: 100px;
+                }
+            }
+            .aboutus__nd{
+                padding-left: 15px;
+                padding-right: 15px;
+                .aboutus__nd-text{
+                    .des{
+                        line-height: 40px;
+                        padding-right: 20px;
+                    }
+                }
+                .aboutus__nd-img{
+                    img{
+                        min-height: 380px;
+                    }
+                }
+            }
+            .aboutus__rd{
+                padding-top: 70px;
+                .aboutus__rd-text{
+                    .des{
+                        width: 550px;
+                    }
+                    .nameau{
+                        width: 550px;
+                        p{
+                            width: 550px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+// css navigator (Menu)
+.menuleft{
+    width: 500px;
+    height: 100%;
+    position: absolute;
+    background-color: $bg-nav-cl;
+    z-index: 21;
+    // @include transform(translateX(0%));
+    opacity: 0;
+    pointer-events: none;
+    @include transition($t);
+    &.active{
+        // @include transform(translateX(100%));
+        opacity: 1;
+        pointer-events: auto;
+        @include transition($t);
+    }
+    &__top{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px 0 40px;
+
+        font-size: 11px;
+        font-family: 'AH';
+        color: $white-cl;
+        text-transform: uppercase;
+        line-height: 30px;
+        .social{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img{
+            width: 20px;
+            margin-left: 20px;
+        }
+    }
+    &__bottom{
+        margin-top: 30px;
+        display: flex;
+        align-items: baseline;
+        .menuleft__bottom-logo{
+            padding: 0 80px 0 50px;
+            cursor: pointer;
+            .bar{
+                height: 1px;
+                width: 80px;
+                background: $white-cl;
+                margin-left: -20px;
+                margin-top: 12px;
+            }
+            .btnclose{
+                margin-top: 40px;
+                .line{
+                    height: 1px;
+                    background-color: #8e9090;
+                    width: 40px;
+                    position: absolute;
+                    &:first-child{
+                        transform: rotate(45deg);
+                    }
+                    &:last-child{
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+        .menuleft__bottom-menu{
+            ul{
+                li{
+                    padding-bottom: 50px;
+                    a{
+                        position: relative;
+                        font-size: 26px;
+                        font-family: 'EB';
+                        color: $text-menu;
+                        text-transform: uppercase;
+                        line-height: 30px;
+                        text-decoration: none;
+                        &::after{
+                            content: '';
+                            height: 1px;
+                            width: 300px;
+                            background-color: $text-menu;
+                            position: absolute;
+                            left: -30px;
+                            bottom: -10px;
+                            @include transform(scaleX(0));
+                            @include transition($t);
+                        }
+                        &:hover{
+                            @include transition($t);
+                            &::after{
+                                @include transform(scaleX(1));
+                                @include transition($t);
+                            }
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            font-size: 14px;
+                            &:last-child{
+                                &::after{
+                                    left: -80px;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .menuleft{
+        width: 100vw;
+    }
+}
+@media (max-width: 575px) {
+    .menuleft{
+        width: 100vw;
+    }
+}
