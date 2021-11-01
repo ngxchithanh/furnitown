@@ -1,0 +1,53 @@
+.header-service{
+    background-color: $white-cl;
+    position:absolute;
+}
+.service{
+    --heightHeader: 100px;
+    padding-top: var(--heightHeader);
+    .container{
+        .title{
+            font-size: 32px;
+            font-family: 'EB';
+            color: $title-cl;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 50px;
+            margin-bottom: 30px;
+        }
+        .des{
+            font-size: 12px;
+            font-family: Arial;
+            color: $black-cl;
+            line-height: 26px;
+            letter-spacing: 1px;
+        }
+        .service__tieude{
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .service__tuvan{
+            padding: 0 30px 80px;
+            border-bottom: 1px solid $black-cl;
+            margin-bottom: 40px;
+            .service__tuvan-ct{
+                text-align: right;
+                padding: 0;
+                .contact_btn{
+                    padding: 90px 0;
+                }
+            }
+        }
+        .service__thicong{
+            text-align: center;
+            .des{
+                width: 630px;
+                margin: auto;
+                margin-bottom: 40px;
+            }
+            img{
+                margin-bottom: 80px;
+            }
+        }
+    }
+}
